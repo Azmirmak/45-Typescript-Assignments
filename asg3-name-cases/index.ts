@@ -1,6 +1,6 @@
 // Assignement #3 : Name Cases: Store a person’s name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.
 
-let personName: string = "Azmir";
+let personName: string = "azmir inam";
 
 //Lower Case
 personName = personName.toLowerCase();
@@ -11,5 +11,7 @@ personName = personName.toUpperCase();
 console.log(personName);
 
 //Title Case
-personName =  personName.charAt(0).toUpperCase() + personName.slice(1).toLowerCase();
-console.log(personName);
+function titleCase(personName : string) : string {
+    return personName.split(` `).map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(` `);
+}
+console.log(titleCase(personName));
